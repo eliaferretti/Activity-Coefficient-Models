@@ -11,5 +11,10 @@ $$ \Lambda_{ii} = 1 $$
 
 $$ \log(\gamma_i) = \frac{ \sum_{j} \tau_{ji} G_{ji} x_j}{\sum_{m} G_{mi} x_m } + \sum_{j}\left( \frac{x_jG_{ij}}{\sum_{m}x_mG_{mj}} \left( \tau_{ij}-\frac{\sum_{n}x_n\tau_{nj}G_{nj}}{\sum_{m} x_mG_{mj}}\right) \right)     $$
 
+$$ \tau_{ij} = \frac{g_{ij}-g_{jj}}{RT} $$
+
+$$ \exp \left( -\alpha_{ij}\tau{ij}\right) $$
+
+$$ \tau_{ij} = 0 \t \t \G_{ij} = 1$$
 
 # 1975 - UNIQUAC Model (Universal QuasiChemical)
