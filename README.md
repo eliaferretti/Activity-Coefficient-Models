@@ -18,3 +18,5 @@ $$ G_{ij} = \exp \left( -\alpha_{ij}\tau_{ij}\right) $$
 $$ \tau_{ij} = 0,     G_{ij} = 1$$
 
 # 1975 - UNIQUAC Model (Universal QuasiChemical)
+
+$$ \log(\gamma_i) = \log(\gamma_i^C) + \log(\gamma_i^R) $$
