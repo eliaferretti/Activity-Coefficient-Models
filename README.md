@@ -30,5 +30,7 @@ $$ \tau_{ij} = \exp\left(-\frac{u_{ij}-u_{jj}}{RT}\right) $$
 $$ \tau_{ii} = 1 $$
 
 $$ z = \text{coordination number}$$
+
 $$ q_i = \text{i-th component volume parameter}$$
+
 $$ r_i = \text{i-th component area parameter}$$
