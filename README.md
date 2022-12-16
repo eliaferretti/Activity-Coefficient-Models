@@ -9,7 +9,7 @@ $$ \Lambda_{ii} = 1 $$
 
 # 1968 - NRTL Model (NonRandom Two-Liquid)
 
-$$ \log\left(\gamma_i\right) = \frac{ \sum_{j} \tau_{ji} G_{ji} x_j}{\sum_{m} G_{mi} x_m } + \sum_{j}\left{ \frac{x_jG_{ij}}{\sum_{m}x_mG_{mj}} \left[ \tau_{ij}-\frac{\sum_{n}x_n\tau_{nj}G_{nj}}{\sum_{m} x_mG_{mj}}\right] \right}     $$
+$$ \log\left(\gamma_i\right) = \frac{ \sum_{j} \tau_{ji} G_{ji} x_j}{\sum_{m} G_{mi} x_m } + \sum_{j}\left[ \frac{x_jG_{ij}}{\sum_{m}x_mG_{mj}} \left( \tau_{ij}-\frac{\sum_{n}x_n\tau_{nj}G_{nj}}{\sum_{m} x_mG_{mj}}\right) \right]     $$
 
 $$ \tau_{ij} = \frac{g_{ij}-g_{jj}}{RT} $$
 
