@@ -47,6 +47,9 @@
 #------------------------------------------------------------------------------------------------------------
 
 
+#import needed library
+import numpy as np
+
 def activityCoefficient_WILSON(i,x,W):
     N = len(x)
     alpha = 0
@@ -115,83 +118,3 @@ def activityCoefficient_UNIQUAC(i,x,tau,z,r,q):
     logGamma_R = q[i]*( 1 - np.log(delta) - rho ) 
     
     return np.exp(logGamma_C + logGamma_R)
-
-import numpy as np
-import scipy
-import matplotlib.pyplot as plt
-
-spec = ["tert-butanol","toluene"]
-method = ["Wilson", "NRTL", "UNIQUAC"]
-
-#experimental data @ T = 35°C
-A = np.array([[1028.5272,   491.8786,   0],
-              [-3225.6147,  4711.5914,  0.0159],
-              [25.9015,     316.6514,   0]])
-T = 35 + 273.15
-
-#data
-vL = np.array([94.88, 106.85])
-R = np.array([3.4528, 3.9228])
-Q = np.array([3.128, 2.968])
-
-#wilson parameter
-W = np.ones((len(spec),len(spec)))
-W[0,1] = vL[1]/vL[0]*np.exp(-A[0,0]/1.98721/T)
-W[1,0] = vL[0]/vL[1]*np.exp(-A[0,1]/1.98721/T)
-
-#NRTL parameter
-tau = np.zeros((len(spec),len(spec)))
-G = np.ones((len(spec),len(spec)))
-
-tau[0,1] = A[1,0]/1.98721/T
-tau[1,0] = A[1,1]/1.98721/T
-G[0,1] = np.exp(-A[1,2]*tau[0,1])
-G[1,0] = np.exp(-A[1,2]*tau[1,0])
-
-#UNIQUAC parameter
-z = 10
-tauN = np.ones((len(spec),len(spec)))
-tauN[0,1] = np.exp(-A[2,0]/1.98721/T)
-tauN[1,0] = np.exp(-A[2,1]/1.98721/T)
-
-#Anotine parameter
-A = np.array([7.23159, 6.95087])
-B = np.array([1107.06, 1342.31])
-C = np.array([172.101, 219.187])
-
-
-#------------------------------------------------------------------------------
-#                           ---TESTING---
-#------------------------------------------------------------------------------
-
-
-n = 50
-x = np.linspace(0,1,n)
-X = np.transpose(np.array([x,1-x]))
-
-p0 = np.power(10, A - B/(T+C-273.15))
-
-y = np.zeros(n); y1 = np.zeros(n); y2 = np.zeros(n)
-pp = np.zeros((n,3))
-
-for i in range(0,n):
-    eqn = lambda p: 1 - x[i]*p0[0]*activityCoefficient_WILSON(0,X[i],W)/p - (1-x[i])*p0[1]*activityCoefficient_WILSON(1,X[i],W)/p
-    eqn2 = lambda p: 1 - x[i]*p0[0]*activityCoefficient_NRTL(0,X[i],G,tau)/p - (1-x[i])*p0[1]*activityCoefficient_NRTL(1,X[i],G,tau)/p
-    eqn3 = lambda p: 1 - x[i]*p0[0]*activityCoefficient_UNIQUAC(0,X[i],tauN,z,R,Q)/p - (1-x[i])*p0[1]*activityCoefficient_UNIQUAC(1,X[i],tauN,z,R,Q)/p
-    
-    p = scipy.optimize.fsolve(eqn,p0[0])
-    p1 = scipy.optimize.fsolve(eqn2,p0[0])
-    p2 = scipy.optimize.fsolve(eqn3,p0[0])
-    
-    pp[i] = p[0], p1[0], p2[0]
-    
-    y[i] = x[i]*p0[0]*activityCoefficient_WILSON(0,X[i],W)/p
-    y1[i] = x[i]*p0[0]*activityCoefficient_NRTL(0,X[i],G,tau)/p1
-    y2[i] = x[i]*p0[0]*activityCoefficient_UNIQUAC(0,X[i],tauN,z,R,Q)/p2
-    
-plt.figure(1,figsize=(5,5))
-plt.plot(x,y,"-b",x,y1,"-g",x,y2,"-r",x,x,":k")
-plt.title("Equilibrium curve at T = 35 °C")
-plt.xlabel("x [-], tert-butanol"); plt.ylabel("y [-], tert-butanol")
-plt.legend(["WILSON","NRTL","UNIQUAC"])
-plt.grid(); plt.show()
