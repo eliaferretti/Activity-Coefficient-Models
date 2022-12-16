@@ -7,6 +7,9 @@ $$ \Lambda_{ij} = \frac{v_j^L}{v_i^L}\exp\left(-\frac{a_{ij}-a_{ii}}{RT}\right) 
 $$ \Lambda_{ii} = 1 $$
 
 
-# 1968 - NRTL Model (Non Random Two Liquid)
+# 1968 - NRTL Model (NonRandom Two-Liquid)
 
 $$ $$
+
+
+# 1975 - UNIQUAC Model (Universal QuasiChemical)
