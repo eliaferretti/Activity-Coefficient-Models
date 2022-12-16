@@ -31,4 +31,4 @@ $$ \tau_{ii} = 1 $$
 
 $$ z = coordination number $$
 $$ q_i = i-th component volume parameter $$
-$$ r_i = i-th component area parameter
+$$ r_i = i-th component area parameter $$
