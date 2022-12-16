@@ -9,7 +9,7 @@ $$ \Lambda_{ii} = 1 $$
 
 # 1968 - NRTL Model (NonRandom Two-Liquid)
 
-$$ \log(\gamma_i) = fraq{\sum_{j} \tau_{ji}G_{ji}x_j}{\sum_{m} G_{mi}x_m} $$
+$$ \log(\gamma_i) = \fraq{\sum_{j} \tau_{ji}G_{ji}x_j}{\sum_{m} G_{mi}x_m} $$
 
 
 # 1975 - UNIQUAC Model (Universal QuasiChemical)
