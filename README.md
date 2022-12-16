@@ -20,3 +20,7 @@ $$ \tau_{ij} = 0,     G_{ij} = 1$$
 # 1975 - UNIQUAC Model (Universal QuasiChemical)
 
 $$ \log(\gamma_i) = \log(\gamma_i^C) + \log(\gamma_i^R) $$
+
+$$ \log(\gamma_i^C) = \log(\frac{q_i}{\sum_jq_jx_j}) $$
+
+$$ \log(\gamma_i^R) = $$
