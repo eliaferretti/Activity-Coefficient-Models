@@ -28,3 +28,7 @@ $$ \log\left(\gamma_i^R\right) = q_i \left[1-\log\left(\sum_j\theta_j\tau_{ji}\r
 $$ \tau_{ij} = \exp\left(-\frac{u_{ij}-u_{jj}}{RT}\right) $$
 
 $$ \tau_{ii} = 1 $$
+
+$$ z = coordination number $$
+$$ q_i = i-th component volume parameter $$
+$$ r_i = i-th component area parameter
