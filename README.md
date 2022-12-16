@@ -29,6 +29,8 @@ $$ \tau_{ij} = \exp\left(-\frac{u_{ij}-u_{jj}}{RT}\right) $$
 
 $$ \theta_i = \frac{x_iq_i}{\sum_jx_jq_j} $$
 
+$$ I_i = \frac{z}{2}\left(r_i-q_i\right) - \left(r_i-1\right)$$
+
 $$ \tau_{ii} = 1 $$
 
 $$ z = \text{coordination number}$$
