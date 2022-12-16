@@ -13,7 +13,7 @@ $$ \log(\gamma_i) = \frac{ \sum_{j} \tau_{ji} G_{ji} x_j}{\sum_{m} G_{mi} x_m } 
 
 $$ \tau_{ij} = \frac{g_{ij}-g_{jj}}{RT} $$
 
-$$ \exp \left( -\alpha_{ij}\tau{ij}\right) $$
+$$ G_{ij} = \exp \left( -\alpha_{ij}\tau_{ij}\right) $$
 
 $$ \tau_{ij} = 0,     G_{ij} = 1$$
 
