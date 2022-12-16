@@ -27,6 +27,8 @@ $$ \log\left(\gamma_i^R\right) = q_i \left[1-\log\left(\sum_j\theta_j\tau_{ji}\r
 
 $$ \tau_{ij} = \exp\left(-\frac{u_{ij}-u_{jj}}{RT}\right) $$
 
+$$ \theta_i = \frac{x_iq_i}{\sum_jx_jq_j} $$
+
 $$ \tau_{ii} = 1 $$
 
 $$ z = \text{coordination number}$$
