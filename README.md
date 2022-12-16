@@ -21,6 +21,6 @@ $$ \tau_{ij} = 0,     G_{ij} = 1$$
 
 $$ \log(\gamma_i) = \log(\gamma_i^C) + \log(\gamma_i^R) $$
 
-$$ \log(\gamma_i^C) = \log\left(\frac{q_i}{\sum_jq_jx_j}\right) + \frac{z}{2}\log\left(\frac{q_i\sum_jr_jx_j}{r_i\sum_jq_jx_j}\right) + I_i - \frac{q_i}{\sum_jq_jx_j}\sum_jx_jI_j $$
+$$ \log(\gamma_i^C) = \log\left(\frac{q_i}{\sum_jx_jq_j}\right) + \frac{z}{2}\log\left(\frac{q_i\sum_jx_jr_j}{r_i\sum_jx_jq_j}\right) + I_i - \frac{q_i}{\sum_jx_jq_j}\sum_jx_jI_j $$
 
 $$ \log(\gamma_i^R) = $$
