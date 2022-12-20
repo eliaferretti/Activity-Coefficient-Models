@@ -21,7 +21,7 @@ $$ \tau_{ij} = 0,     G_{ij} = 1$$
 
 $$ \log\left(\gamma_i\right) = \log\left(\gamma_i^C\right) + \log\left(\gamma_i^R\right) $$
 
-$$ \log\left(\gamma_i^C\right) = \log\left(\frac{q_i}{\sum_jx_jq_j}\right) + \frac{z}{2}\log\left(\frac{q_i\sum_jx_jr_j}{r_i\sum_jx_jq_j}\right) + I_i - \frac{q_i}{\sum_jx_jq_j}\sum_jx_jI_j $$
+$$ \log\left(\gamma_i^C\right) = \log\left(\frac{r_i}{\sum_jx_jr_j}\right) + \frac{z}{2}\log\left(\frac{q_i\sum_jx_jr_j}{r_i\sum_jx_jq_j}\right) + I_i - \frac{r_i}{\sum_jx_jr_j}\sum_jx_jI_j $$
 
 $$ \log\left(\gamma_i^R\right) = q_i \left[1-\log\left(\sum_j\theta_j\tau_{ji}\right) - \sum_j\left(\frac{\theta_j\tau_{ij}}{\sum_k\theta_k\tau_{kj}}\right)\right]$$
 
