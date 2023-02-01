@@ -33,7 +33,7 @@ $$ I_i = \frac{z}{2}\left(r_i-q_i\right) - \left(r_i-1\right)$$
 
 $$ \tau_{ii} = 1 $$
 
-$$ z = \text{coordination number}$$
+$$ z = \text{coordination number, most of the time the parameter is ineffective, standard value is 10}$$
 
 $$ q_i = \text{i-th component volume parameter}$$
 
