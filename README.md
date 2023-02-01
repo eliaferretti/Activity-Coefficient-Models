@@ -15,7 +15,7 @@ $$ \tau_{ij} = \frac{g_{ij}-g_{jj}}{RT} $$
 
 $$ G_{ij} = \exp \left( -\alpha_{ij}\tau_{ij}\right) $$
 
-$$ \tau_{ij} = 0,     G_{ij} = 1$$
+$$ \tau_{ii} = 0,     G_{ii} = 1$$
 
 # 1975 - UNIQUAC Model (Universal QuasiChemical)
 
